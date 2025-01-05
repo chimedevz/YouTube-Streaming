@@ -1,11 +1,12 @@
 import express from 'express'
+import dotenv from 'dotenv'
 import { spawn } from 'child_process'
 import * as readline from 'node:readline/promises';
 import { stdin as input, stdout as output } from 'node:process';
 const server = express()
 const rl = readline.createInterface({ input, output });
 
-const streamkey = "3mxd-dr1v-my51-jsfb-1vrq"
+const streamkey = process.env.STREAMKEY
 const video = "https://files.catbox.moe/flrk8l.mp4"
 const audio = "https://stream.zeno.fm/ez4m4918n98uv";
 
